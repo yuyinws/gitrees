@@ -11,4 +11,4 @@ const main = defineCommand({
   subCommands: commands,
 })
 
-export const run = runMain(main)
+export const run = () => runMain(main)
