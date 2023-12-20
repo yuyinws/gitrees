@@ -1,4 +1,4 @@
-import { defineCommand, parseArgs } from 'citty'
+import { defineCommand } from 'citty'
 import { redBright } from 'colorette'
 import { execaCommand } from 'execa'
 import { isConfigFileExist } from '../utils/config'

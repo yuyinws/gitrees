@@ -1,4 +1,4 @@
-import { defineCommand, renderUsage, runMain, showUsage } from 'citty'
+import { defineCommand, runMain } from 'citty'
 import { version } from '../package.json'
 import { commands } from './commands'
 
