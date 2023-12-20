@@ -1,4 +1,3 @@
-import { dirname } from 'pathe'
 import type { RepoMeta } from '../types'
 import { getConfigField } from './config'
 
