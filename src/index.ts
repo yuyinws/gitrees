@@ -1,5 +1,6 @@
 import { defineCommand, renderUsage, runMain, showUsage } from 'citty'
 import { version } from '../package.json'
+import { commands } from './commands'
 
 const main = defineCommand({
   meta: {
@@ -7,25 +8,7 @@ const main = defineCommand({
     version,
     description: 'Git tree structure cli tools',
   },
-  args: {
-    // name: {
-    //   type: 'positional',
-    //   description: 'Your name',
-    //   required: true,
-    // },
-    // friendly: {
-    //   type: 'boolean',
-    //   description: 'Use friendly greeting',
-    // },
-    url: {
-      type: 'positional',
-      description: 'Initialize project',
-    },
-  },
-  run(a) {
-    console.log(a)
-    // console.log(`${args.friendly ? 'Hi' : 'Greetings'} ${args.name}!`)
-  },
+  subCommands: commands,
 })
 
 runMain(main)
