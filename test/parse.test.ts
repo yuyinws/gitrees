@@ -23,11 +23,11 @@ describe('git url parse', () => {
   })
 
   it('ip http', () => {
-    expect(gitUrlParse('http://192.168.0.194:8000/hello/word')).toMatchInlineSnapshot(`
+    expect(gitUrlParse('http://192.168.0.194:8000/slmc/slmc-webview.git')).toMatchInlineSnapshot(`
       {
         "domain": "192.168.0.194:8000",
-        "name": "word",
-        "owner": "hello",
+        "name": "slmc-webview",
+        "owner": "slmc",
       }
     `)
   })

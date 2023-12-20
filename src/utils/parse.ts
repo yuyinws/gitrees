@@ -46,7 +46,7 @@ export function getCloneCommand(rawArgs: string[], repoMeta: RepoMeta) {
         domain = alias[key]
     })
   }
-  const clonePath = `${dirname(`${root}/${domain}/${owner}/${name}`)}`
+  const clonePath = `${`${root}/${domain}/${owner}/${name}`}`
   const command = `git clone ${rawArgs.join(' ')} ${clonePath}`
   return command
 }
