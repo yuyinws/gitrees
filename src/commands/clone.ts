@@ -1,6 +1,6 @@
 import { defineCommand } from 'citty'
-import { redBright } from 'colorette'
-import { execaCommand } from 'execa'
+import { bold, cyanBright, redBright } from 'colorette'
+import { execaCommandSync } from 'execa'
 import { isConfigFileExist } from '../utils/config'
 import { getCloneCommand, gitUrlParse } from '../utils/parse'
 
@@ -21,8 +21,9 @@ export default defineCommand({
       return false
     }
     else {
-      const command = getCloneCommand(rawArgs, parsed)
-      execaCommand(command, { stdio: 'inherit' })
+      const { command, clonePath } = getCloneCommand(rawArgs, parsed)
+      execaCommandSync(command, { stdio: 'inherit' })
+      console.log(bold(cyanBright(`cd ${clonePath}`)))
     }
   },
 })
