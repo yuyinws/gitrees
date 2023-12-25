@@ -42,6 +42,16 @@ describe('git url parse', () => {
     `)
   })
 
+  it('dot', () => {
+    expect(gitUrlParse('git@github.com:yuyinws/yuy1n.io.git')).toMatchInlineSnapshot(`
+      {
+        "domain": "github.com",
+        "name": "yuy1n.io",
+        "owner": "yuyinws",
+      }
+    `)
+  })
+
   it('invalid', () => {
     expect(gitUrlParse('https://www.google.com')).toMatchInlineSnapshot(`null`)
   })

@@ -9,11 +9,18 @@ export default defineCommand({
     name: 'clone',
     description: 'Clone a repository',
   },
+  args: {
+    e: {
+      type: 'boolean',
+      description: 'enter directory after cloning',
+      required: false,
+    },
+  },
   async run({ args, rawArgs }) {
     if (!isConfigFileExist)
       return false
 
-    const { _ } = args
+    const { _, e: isEnter } = args
     const repoUrl = _[0]
     const parsed = gitUrlParse(repoUrl)
     if (!parsed) {
@@ -21,9 +28,16 @@ export default defineCommand({
       return false
     }
     else {
-      const { command, clonePath } = getCloneCommand(rawArgs, parsed)
+      const filterArgs = rawArgs.filter(arg => arg !== '-e')
+      const { command, clonePath } = getCloneCommand(filterArgs, parsed)
       execaCommandSync(command, { stdio: 'inherit' })
-      console.log(bold(cyanBright(`cd ${clonePath}`)))
+      if (isEnter) {
+        execaCommandSync(`cd ${clonePath}`, { stdio: 'inherit' })
+        console.log(bold(cyanBright(`cd ${clonePath}`)))
+      }
+      else {
+        console.log(bold(cyanBright(`clone to ${clonePath}`)))
+      }
     }
   },
 })

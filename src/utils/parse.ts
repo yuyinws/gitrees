@@ -2,10 +2,10 @@ import type { RepoMeta } from '../types'
 import { getConfigField } from './config'
 
 export function gitUrlParse(url: string): RepoMeta | null {
-  const regexHttp = /^(?:https?|git|ssh|rsync)\:\/\/([^\/]+)\/([^\/]+)\/([^\.]+)/
+  const regexHttp = /^(?:https?|git|ssh|rsync)\:\/\/([^\/]+)\/([^\/]+)\/(.+)\.git/
   const matchHttp = url.match(regexHttp)
 
-  const regexSsh = /^([^@]+)@([^:]+):([^\/]+)\/([^\.]+)/
+  const regexSsh = /^([^@]+)@([^:]+):([^\/]+)\/(.+)\.git/
   const matchSsh = url.match(regexSsh)
 
   if (matchHttp) {
