@@ -12,6 +12,16 @@ describe('git url parse', () => {
     `)
   })
 
+  it('no .git', () => {
+    expect(gitUrlParse('https://github.com/vuejs/core')).toMatchInlineSnapshot(`
+      {
+        "domain": "github.com",
+        "name": "core",
+        "owner": "vuejs",
+      }
+    `)
+  })
+
   it('ssh', () => {
     expect(gitUrlParse('git@github.com:vuejs/core.git')).toMatchInlineSnapshot(`
       {
