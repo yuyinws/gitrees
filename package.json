@@ -4,15 +4,14 @@
   "version": "0.1.6",
   "packageManager": "pnpm@8.11.0",
   "description": "Organize your local git repositories in a tree structure.",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "yuyinws",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-placeholder#readme",
+  "homepage": "https://github.com/yuyinws/gitrees#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-placeholder.git"
+    "url": "git+https://github.com/yuyinws/gitrees.git"
   },
-  "bugs": "https://github.com/antfu/pkg-placeholder/issues",
+  "bugs": "https://github.com/yuyinws/gitrees/issues",
   "keywords": [
     "git",
     "cli"
