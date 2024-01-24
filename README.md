@@ -13,6 +13,8 @@ Organize your local git repositories in a tree structure:
         └── <GitHub repo name>
 ```
 
+![Kapture 2024-01-24 at 09.40.50](https://cdn.jsdelivr.net/gh/yuyinws/static@master/2024/01/upgit_20240124_1706060562.gif)
+
 ## Why
 
 This project is highly inspired by [this post](https://hirok.io/posts/github-tree-structure). You can read it for more information.
