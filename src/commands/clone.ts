@@ -1,6 +1,7 @@
 import { defineCommand } from 'citty'
 import { bold, cyanBright, redBright } from 'colorette'
 import { execaCommandSync } from 'execa'
+import clipboard from 'clipboardy'
 import { isConfigFileExist } from '../utils/config'
 import { getCloneCommand, gitUrlParse } from '../utils/parse'
 
@@ -24,7 +25,8 @@ export default defineCommand({
       const filterArgs = rawArgs.filter(arg => arg !== '-e')
       const { command, clonePath } = getCloneCommand(filterArgs, parsed)
       execaCommandSync(command, { stdio: 'inherit' })
-      console.log(bold(cyanBright(`cd ${clonePath}`)))
+      clipboard.writeSync(`cd ${clonePath}`)
+      console.log(bold(cyanBright(`cd ${clonePath} (Copied ✓)`)))
     }
   },
 })

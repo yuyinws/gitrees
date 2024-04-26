@@ -2,7 +2,6 @@
   "name": "gitrees",
   "type": "module",
   "version": "0.1.7",
-  "packageManager": "pnpm@8.11.0",
   "description": "Organize your local git repositories in a tree structure.",
   "author": "yuyinws",
   "license": "MIT",
@@ -47,6 +46,7 @@
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "citty": "^0.1.5",
+    "clipboardy": "^4.0.0",
     "colorette": "^2.0.20",
     "execa": "^8.0.1",
     "pathe": "^1.1.1"
