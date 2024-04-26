@@ -1,7 +1,7 @@
 {
   "name": "gitrees",
   "type": "module",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Organize your local git repositories in a tree structure.",
   "author": "yuyinws",
   "license": "MIT",
