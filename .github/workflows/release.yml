@@ -16,8 +16,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        name: Install pnpm
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
 
       - name: Set node
         uses: actions/setup-node@v3
